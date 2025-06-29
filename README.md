@@ -3,6 +3,8 @@ Overview
 <br>
 ShopMart is a responsive e-commerce website built using HTML, CSS, and TypeScript, designed to simulate a real-world shopping experience. It includes product listings, a cart system, and a functional user login feature for a more personalized interaction.
 <br>
+
+
 ✨ Features
 <br>
 - Visually appealing and responsive UI design
@@ -13,9 +15,13 @@ ShopMart is a responsive e-commerce website built using HTML, CSS, and TypeScrip
 - Organized, maintainable codebase
 <br>
 🛠️ Tech Stack
+<br>
 - HTML – Semantically structured layout
+<br>
 - CSS – Custom styling and responsive design
+<br>
 - TypeScript – Adds typing and scalable code structure
+
 <br>
 📌 What I Learned
 <br>
