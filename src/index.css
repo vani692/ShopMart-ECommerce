@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Text selection */
+::selection {
+  background: #06b6d4;
+  color: #fff;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-slate-200 hover:bg-slate-300 text-slate-900 font-semibold py-2 px-4 rounded transition-colors;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow;
+}
+
+/* Input styles */
+.input-field {
+  @apply w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent;
+}
+
+/* Product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+/* Price styling */
+.price-large {
+  @apply text-2xl font-bold text-emerald-600;
+}
+
+.price-small {
+  @apply text-lg font-semibold text-slate-900;
+}
+
+.price-original {
+  @apply text-sm text-slate-500 line-through;
+}
+
+/* Rating stars */
+.star-filled {
+  @apply text-amber-400 fill-current;
+}
+
+.star-empty {
+  @apply text-slate-300;
+}
+
+/* Badge styles */
+.badge-bestseller {
+  @apply bg-emerald-500 text-white text-xs px-2 py-1 rounded;
+}
+
+.badge-new {
+  @apply bg-cyan-500 text-white text-xs px-2 py-1 rounded;
+}
+
+.badge-sale {
+  @apply bg-rose-500 text-white text-xs px-2 py-1 rounded;
+}
+
+/* Navigation styles */
+.nav-link {
+  @apply text-white hover:text-cyan-300 transition-colors;
+}
+
+.nav-link-active {
+  @apply text-cyan-300 font-semibold;
+}
+
+/* Search bar */
+.search-container {
+  @apply flex flex-1 max-w-3xl;
+}
+
+.search-input {
+  @apply flex-1 px-4 py-2 text-black focus:outline-none;
+}
+
+.search-button {
+  @apply bg-cyan-500 hover:bg-cyan-600 px-4 py-2 rounded-r transition-colors;
+}
+
+/* Cart styles */
+.cart-item {
+  @apply bg-white rounded-lg shadow-sm border border-slate-200 p-6;
+}
+
+.cart-quantity {
+  @apply flex items-center border border-slate-300 rounded;
+}
+
+.cart-quantity button {
+  @apply p-2 hover:bg-slate-100 transition-colors;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Loading states */
+.skeleton {
+  @apply animate-pulse bg-slate-200 rounded;
+}
+
+.skeleton-text {
+  @apply h-4 bg-slate-200 rounded;
+}
+
+.skeleton-avatar {
+  @apply w-10 h-10 bg-slate-200 rounded-full;
+}
+
+/* Error states */
+.error-message {
+  @apply text-rose-600 text-sm mt-1;
+}
+
+.success-message {
+  @apply text-emerald-600 text-sm mt-1;
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Custom gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
